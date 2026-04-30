@@ -8,7 +8,7 @@ scaler = joblib.load('scaler.pkl')
 expected_cols = joblib.load('columns.pkl')
 
 # Set up the Streamlit app
-st.title('Heart Disease Prediction by Ayesha')
+st.title('Heart Disease Prediction App')
 st.markdown('## Input Parameters')
 
 age = st.slider('Age', 0, 100, 54)
@@ -40,7 +40,7 @@ if st.button('Predict'):
 
 
     input_df = pd.DataFrame([raw_input])
-    
+
     # One-hot encode categorical features
     input_df = pd.get_dummies(input_df)
 
